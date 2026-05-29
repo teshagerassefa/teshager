@@ -492,10 +492,18 @@ h3 {
 }
 
 .contact-section h2 {
-  max-width: 720px;
+  max-width: 520px;
 }
 
-.contact-section p:last-child {
+.contact-note {
+  max-width: 640px;
+  margin: 1rem 0 0;
+  color: #314039;
+  font-size: 1.03rem;
+}
+
+.contact-location {
+  margin: 0.85rem 0 0;
   color: var(--muted);
 }
 
