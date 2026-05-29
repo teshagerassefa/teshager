@@ -145,17 +145,18 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.8fr);
+  grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
   align-items: stretch;
   gap: clamp(1.5rem, 4vw, 4.5rem);
   min-height: min(690px, calc(88svh - 74px));
-  max-width: 1360px;
+  width: min(calc(100% - 2rem), var(--max));
   margin: 0 auto;
-  padding: clamp(2rem, 5.5vw, 5.2rem) max(1rem, calc((100vw - var(--max)) / 2)) 1.5rem;
+  padding: clamp(2rem, 5.5vw, 5.2rem) 0 1.5rem;
 }
 
 .hero-copy {
   align-self: center;
+  min-width: 0;
   max-width: 780px;
 }
 
@@ -172,12 +173,12 @@ h1,
 h2,
 h3,
 p {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 h1 {
   margin: 0;
-  max-width: 10ch;
+  max-width: 12ch;
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif;
   font-size: clamp(3.15rem, 7.4vw, 6.6rem);
   line-height: 0.93;
@@ -261,9 +262,9 @@ h3 {
 .signal-strip {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: var(--max);
+  width: min(calc(100% - 2rem), var(--max));
   margin: 0 auto;
-  padding: 1.25rem max(1rem, calc((100vw - var(--max)) / 2));
+  padding: 1.25rem;
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
